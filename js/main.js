@@ -23,7 +23,7 @@ const sliderTotal = document.querySelector('#sliderTotal');
 
 function updateSlideFraction() {
    const sliderInfo = headerSlider.getInfo();
-   // показываем номер текущего слайда currentSlideIndex.innerText = '0' + sliderInfo.index;
+   // показываем номер текущего слайда
    currentSlideIndex.innerText = '0' + (sliderInfo.navCurrentIndex + 1);
    sliderTotal.innerText = '0' + sliderInfo.pages;
 }
