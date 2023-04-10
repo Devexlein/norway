@@ -1,0 +1,227 @@
+@import './null.css';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700&display=swap');
+
+/* ======= COMMON-STYLE ===================================================================================== */
+
+body {
+   /* padding: 0px 15px; */
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 1.22;
+
+   color: #fff;
+}
+
+/* body._lock {
+   overflow: hidden;
+} */
+
+/* .wrapper {
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+} */
+
+/* [class*="__container"] {
+   max-width: 1190px;
+   margin: 0 auto;
+   padding: 0px 15px;
+} */
+
+.header {
+   min-height: 100vh;
+   /* max-height: 1204px; */
+   /* сохраняем пропорции */
+   /* aspect-ratio: 1920 / 1024; */
+   background-color: #C4C4C4;
+   position: relative;
+}
+
+/* .header__slider {} */
+
+.header-slider {
+   width: 100%;
+   height: 100%;
+}
+
+.header-slider__item {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background: center / cover no-repeat;
+}
+
+.header-slider__item::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: linear-gradient(181.06deg, rgba(0, 0, 0, 0.2) 0.91%, rgba(255, 255, 255, 0) 116.71%, rgba(255, 255, 255, 0) 116.72%);
+}
+
+.header-slider__img-bg {
+   width: 100%;
+   height: 100%;
+}
+
+/* .header-slider-pagination {}
+.header-slider-controls {} */
+
+.header__content {
+   padding: 48px 75px 82px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.header__head {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.header__nav {
+   display: flex;
+}
+
+.header__nav>li+li {
+   margin-left: 65px;
+}
+
+/* .header__logo {}
+.logo {}
+.header__nav-item {} */
+
+.header__link {
+   font-weight: 600;
+   font-size: 18px;
+}
+
+/* .header__nav-btn {}
+.icon-menu {} */
+
+.header__title-box {
+   text-align: center;
+   width: 100%;
+   position: relative;
+}
+
+.header__socials {
+   position: absolute;
+   top: 50%;
+   left: 0;
+   transform: translateY(-50%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 30px;
+}
+
+/* .social {}
+.social__image {} */
+
+.header__title-small {
+   margin-bottom: -30px;
+   font-weight: 500;
+   font-size: 30px;
+   letter-spacing: 0.55em;
+   text-transform: uppercase;
+   color: rgba(255, 255, 255, 0.7);
+}
+
+.header__title {
+   font-weight: 700;
+   font-size: 250px;
+
+   background: linear-gradient(27.06deg, rgb(0, 0, 0, 0.9) -3.87%, rgba(255, 255, 255, 0) 35%), #FFFFFF;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+   text-fill-color: transparent;
+}
+
+.header__trips {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+}
+
+.header__trips>*+* {
+   margin-left: 27px;
+}
+
+.trip {
+   flex: 0 0 33.333%;
+   max-width: 415px;
+   padding: 35px 30px 25px 95px;
+   background: url('/img/icons/map-marker-line.svg') 32px 50% no-repeat;
+   position: relative;
+   transition: filter 0.2s, background-color 0.2s;
+}
+
+.trip::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, 0.1);
+   filter: blur(3px);
+   border-radius: 5px;
+}
+
+.trip:hover::before {
+   filter: blur(0px);
+   background-color: rgba(255, 255, 255, 0.11);
+}
+
+.trip__title {
+   font-weight: 700;
+   font-size: 20px;
+   margin-bottom: 4px;
+}
+
+.trip__text {
+   opacity: 0.4;
+}
+
+.header__see-more {
+   display: block;
+   position: absolute;
+   left: 75px;
+   bottom: 65px;
+   padding-left: 60px;
+   font-weight: 600;
+   font-size: 14px;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   opacity: 0.6;
+   transform: rotate(-90deg);
+   transform-origin: left top;
+}
+
+.header__see-more::before {
+   position: absolute;
+   content: "";
+   left: 0;
+   top: 50%;
+   /* top: calc( 50% - 1.5px ); */
+   transform: translateY(-50%);
+   background-color: #fff;
+   opacity: 0.3;
+   display: block;
+   width: 38px;
+   height: 3px;
+}
