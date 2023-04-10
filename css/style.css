@@ -9,7 +9,6 @@ body {
    font-size: 16px;
    font-weight: 400;
    line-height: 1.22;
-
    color: #fff;
 }
 
@@ -30,6 +29,7 @@ body {
    padding: 0px 15px;
 } */
 
+/* ======= HEADER ===================================================================================== */
 .header {
    min-height: 100vh;
    /* max-height: 1204px; */
@@ -39,11 +39,24 @@ body {
    position: relative;
 }
 
+/* ======= header-slider ===================================================================================== */
+
 /* .header__slider {} */
 
 .header-slider {
    width: 100%;
    height: 100%;
+}
+
+.header-slider::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   z-index: 1;
+   background: linear-gradient(181.06deg, rgba(0, 0, 0, 0.2) 0.91%, rgba(255, 255, 255, 0) 116.71%, rgba(255, 255, 255, 0) 116.72%);
 }
 
 .header-slider__item {
@@ -53,24 +66,60 @@ body {
    background: center / cover no-repeat;
 }
 
-.header-slider__item::before {
-   content: "";
-   position: absolute;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   background: linear-gradient(181.06deg, rgba(0, 0, 0, 0.2) 0.91%, rgba(255, 255, 255, 0) 116.71%, rgba(255, 255, 255, 0) 116.72%);
-}
-
 .header-slider__img-bg {
    width: 100%;
-   height: 100%;
+   height: 100vh;
 }
 
-/* .header-slider-pagination {}
-.header-slider-controls {} */
+.tns-nav {
+   position: absolute;
+   top: 50%;
+   right: 100px;
+   transform: translate(-50%, -50%);
+   z-index: 2;
+}
 
+.tns-nav button {
+   display: block;
+   width: 2px;
+   height: 80px;
+   background-color: #fff;
+   opacity: 0.3;
+}
+
+.tns-nav button.tns-nav-active {
+   opacity: 1;
+}
+
+.header-slider-controls {
+   position: absolute;
+   right: 49px;
+   bottom: 77px;
+   display: grid;
+   justify-items: start;
+   text-align: left;
+   gap: 15px;
+   z-index: 3;
+}
+
+.header-slider-controls__arrows {
+   transform: translateX(-20%);
+   display: flex;
+   gap: 5px;
+}
+
+.header-slider-controls__count {
+   font-weight: 600;
+   font-size: 18px;
+   color: rgb(255, 255, 255, 0.3);
+}
+
+.header-slider-controls__count-current {
+   font-size: 32px;
+   color: rgb(255, 255, 255, 1);
+}
+
+/* ======= header-content ===================================================================================== */
 .header__content {
    padding: 48px 75px 82px;
    position: absolute;

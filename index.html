@@ -6,6 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Norway</title>
+   <link rel="stylesheet" href="./libs/tiny-slider/tiny-slider.css">
    <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -15,7 +16,7 @@
          <div class="header-slider__item">
             <img src="./img/header/bg-1.jpg" alt="Norway, coast" class="header-slider__img-bg">
          </div>
-         <!-- <div class="header-slider__item">
+         <div class="header-slider__item">
             <img src="./img/header/bg-2.jpg" alt="Norway, steep rock" class="header-slider__img-bg">
          </div>
          <div class="header-slider__item">
@@ -23,11 +24,20 @@
          </div>
          <div class="header-slider__item">
             <img src="./img/header/bg-4.jpg" alt="Norway, mountains" class="header-slider__img-bg">
-         </div> -->
+         </div>
       </div>
 
-      <div class="header-slider-pagination"></div>
-      <div class="header-slider-controls"></div>
+      <div class="header-slider-controls">
+         <div class="header-slider-controls__arrows">
+            <button id="headerSliderPrev"><img src="./img/icons/arrow-left.svg" alt="Prev"></button>
+            <button id="headerSliderNext"><img src="./img/icons/arrow-right.svg" alt="Next"></button>
+         </div>
+         <div class="header-slider-controls__count">
+            <span id="currentSlide" class="header-slider-controls__count-current">0</span>
+            <span>/</span>
+            <span id="sliderTotal">0</span>
+         </div>
+      </div>
 
       <div class="header__content">
          <nav class="header__head">
@@ -74,6 +84,9 @@
          <a href="#" class="header__see-more">See more</a>
       </div>
    </header>
+
+   <script src="./libs/tiny-slider/min/tiny-slider.js"></script>
+   <script src="./js/main.js"></script>
 </body>
 
 </html>
