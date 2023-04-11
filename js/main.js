@@ -4,7 +4,7 @@ const headerSlider = tns({
    container: '.header-slider',
    items: 1,
    slideBy: 'page',
-   autoplay: true,
+   // autoplay: true,
    speed: 1000,
    autoplayButtonOutput: false,
    controls: false
