@@ -66,6 +66,7 @@ body {
 .header-slider__img-bg {
    width: 100%;
    height: 100vh;
+   -o-object-fit: cover;
    object-fit: cover;
 }
 
@@ -238,7 +239,9 @@ body {
    padding: 2% 1% 1.5% 5%;
    background: url('/img/icons/map-marker-line.svg') 32px 50% no-repeat;
    position: relative;
+   transition: background-color 0.2s, -webkit-filter 0.2s;
    transition: filter 0.2s, background-color 0.2s;
+   transition: filter 0.2s, background-color 0.2s, -webkit-filter 0.2s;
 }
 
 .trip::before {
@@ -249,17 +252,20 @@ body {
    width: 100%;
    height: 100%;
    background-color: rgba(255, 255, 255, 0.1);
+   -webkit-filter: blur(3px);
    filter: blur(3px);
    border-radius: 5px;
 }
 
 .trip:hover::before,
 .trip:focus::before {
+   -webkit-filter: blur(0px);
    filter: blur(0px);
    background-color: rgba(255, 255, 255, 0.11);
 }
 
 .trip:active::before {
+   -webkit-filter: blur(0px);
    filter: blur(0px);
    background-color: rgba(255, 255, 255, 0.2);
 }
